@@ -24,37 +24,37 @@ public class TpspringApplication implements CommandLineRunner {
 //		productRepository.save(new Product(null,"Printer",400,7));
 //		productRepository.save(new Product(null,"Smart Phone",2700,3));
 
-		List<Product> products = productRepository.findAll();
-		products.forEach(product -> {
-			System.out.println(product.toString());
-		});
-
-		Product product = productRepository.findById(Long.valueOf(1)).get();
-		System.out.println("***********************");
-		System.out.println(product.getId());
-		System.out.println(product.getName());
-		System.out.println(product.getPrice());
-		System.out.println(product.getQuantity());
-		System.out.println("***********************");
-
-		List<Product> productList = productRepository.findByNameContains("C");
-		productList.forEach(p->{
-			System.out.println(p);
-		});
-
-
-		System.out.println("***********************");
-		List<Product> productList2 = productRepository.search("%C%");
-		productList2.forEach(p->{
-			System.out.println(p);
-		});
-
-
-		System.out.println("***********************");
-		List<Product> productList3 = productRepository.searchByPrice(200);
-		productList3.forEach(p->{
-			System.out.println(p);
-		});
+//		List<Product> products = productRepository.findAll();
+//		products.forEach(product -> {
+//			System.out.println(product.toString());
+//		});
+//
+//		Product product = productRepository.findById(Long.valueOf(1)).get();
+//		System.out.println("***********************");
+//		System.out.println(product.getId());
+//		System.out.println(product.getName());
+//		System.out.println(product.getPrice());
+//		System.out.println(product.getQuantity());
+//		System.out.println("***********************");
+//
+//		List<Product> productList = productRepository.findByNameContains("C");
+//		productList.forEach(p->{
+//			System.out.println(p);
+//		});
+//
+//
+//		System.out.println("***********************");
+//		List<Product> productList2 = productRepository.search("%C%");
+//		productList2.forEach(p->{
+//			System.out.println(p);
+//		});
+//
+//
+//		System.out.println("***********************");
+//		List<Product> productList3 = productRepository.searchByPrice(200);
+//		productList3.forEach(p->{
+//			System.out.println(p);
+//		});
 
 	}
 }
